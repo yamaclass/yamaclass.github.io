@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{{ page.title }}</title>
-
-  /assets/css/style.css
+  <title>{{ page.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
   <div class="layout">
-
     <aside class="sidebar">
       <h3>ITパスポート</h3>
 
-      {% assign menu_pages = site.pages | sort: "title" %}
+      {% assign menu_pages = site.pages | where_exp: "page", "page.url contains '/kait_ipass/'" | sort: "title" %}
 
       <ul>
         {% for menu_page in menu_pages %}
-          {% if menu_page.url contains '/kait_ipass/' %}
-            {% if menu_page.title %}
-              <li>
-                {{ menu_page.url }}
-                  {{ menu_page.title }}
-                </a>
-              </li>
-            {% endif %}
-          {% endif %}
+        {% if menu_page.title %}
+        <li>
+          <a href="{{ menu_page.url | relative_url }}">{{ menu_page.title }}</a>
+        </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </aside>
@@ -35,7 +29,7 @@
     <main class="content">
       {{ content }}
     </main>
-
   </div>
 </body>
+
 </html>
