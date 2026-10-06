@@ -3,35 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
 
-  <link rel="stylesheet"
-        href="{{ '/assets/css/style.css' | relative_url }}">
+  <title>{{ page.title | default: site.title }}</title>
+
+  <link relts/css/style.css' | relative_url }}
 </head>
 
 <body>
+  <div class="layout">
 
-<div class="layout">
+    <aside class="sidebar">
+      <h3>ITパスポート</h3>
 
-  <aside class="sidebar">
-    <h3>ITges = site.pages | sort: "title" %}
-      {% for p in pages %}
-        {% if p.url contains '/kait_ipass/' %}
-        <li>
-          {{ p.url | relative_url }}
-            {{ p.title }}
-          </a>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </aside>
+      {% assign menu_pages = site.pages | sort: "title" %}
 
-  <main class="content">
-    {{ content }}
-  </main>
+      <ul>
+        {% for menu_page in menu_pages %}
+          {% if menu_page.url contains '/kait_ipass/' and menu_page.title %}
+            <li>
+              {{ menu_page.url | relative_url }}
+                {{ menu_page.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </aside>
 
-</div>
+    <main class="content">
+      {{ content }}
+    </main>
 
+  </div>
 </body>
 </html>
