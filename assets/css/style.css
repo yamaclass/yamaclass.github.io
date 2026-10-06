@@ -1,0 +1,32 @@
+ol.aiueo {
+  list-style: none !important;
+  padding-left: 0;
+}
+
+ol.aiueo li {
+  list-style: none !important;
+}
+
+ol.aiueo li::before {
+  font-weight: bold;
+}
+
+ol.aiueo li:nth-child(1)::before {
+  content: "ア. ";
+}
+
+ol.aiueo li:nth-child(2)::before {
+  content: "イ. ";
+}
+
+ol.aiueo li:nth-child(3)::before {
+  content: "ウ. ";
+}
+
+ol.aiueo li:nth-child(4)::before {
+  content: "エ. ";
+}
+
+ol.aiueo li:nth-child(5)::before {
+  content: "オ. ";
+}
