@@ -1,0 +1,1 @@
+# yamaclass.github.io
