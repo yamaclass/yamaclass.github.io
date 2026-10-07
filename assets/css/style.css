@@ -32,9 +32,16 @@
 
 .kait_ipass ol.aiueo li {
   list-style: none !important;
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 0.5rem;
 }
 
 .kait_ipass ol.aiueo li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2em;
   font-weight: bold;
 }
 
