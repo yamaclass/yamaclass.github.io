@@ -58,6 +58,10 @@
   content: "オ. ";
 }
 
-.kait_ipass li.ans {
-  color: red;
+.kait_ipass ol.aiueo li.ans {
+  color: red !important;
+}
+
+.kait_ipass ol.aiueo li.ans::before {
+  color: red !important;
 }
