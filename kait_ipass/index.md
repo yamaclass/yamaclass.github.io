@@ -1,6 +1,6 @@
 ---
 layout: kait_ipass
-title: トップページ
+title: 
 ---
 
 ## 神奈川工科大学
