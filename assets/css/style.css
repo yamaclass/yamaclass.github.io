@@ -34,7 +34,8 @@
   list-style: none !important;
   position: relative;
   padding-left: 3.2em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
 }
 
 .kait_ipass ol.aiueo li::before {
