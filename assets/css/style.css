@@ -33,7 +33,7 @@
 .kait_ipass ol.aiueo li {
   list-style: none !important;
   position: relative;
-  padding-left: 2.5em;
+  padding-left: 3.2em;
   margin-bottom: 0.5rem;
 }
 
@@ -41,8 +41,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 2em;
+  width: 2.8em;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .kait_ipass ol.aiueo li:nth-child(1)::before {
