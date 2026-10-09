@@ -95,11 +95,13 @@
   line-height: 1.7;
   margin: 0.75rem 0;
   max-width: 100%;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .kait_ipass .math mjx-container,
 .kait_ipass .math .MathJax {
-  line-height: 2.2 !important;
-  font-size: 1em !important;
+  display: inline-block;
+  line-height: 1.7 !important;
+  font-size: 1.5em !important;
+  overflow: visible;
 }
