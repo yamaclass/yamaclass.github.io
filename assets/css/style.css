@@ -91,7 +91,7 @@
 
 .kait_ipass .math {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 1.7;
   margin: 0.75rem 0;
   max-width: 100%;
@@ -102,6 +102,6 @@
 .kait_ipass .math .MathJax {
   display: inline-block;
   line-height: 1.7 !important;
-  font-size: 1.2em !important;
+  font-size: 1.4em !important;
   overflow: visible;
 }
