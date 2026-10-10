@@ -1,6 +1,6 @@
 ---
 layout: kait_ipass
-title: トップページ
+title: 初級IT国家資格取得支援講義
 ---
 
 ## 神奈川工科大学
