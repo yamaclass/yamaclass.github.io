@@ -1,4 +1,7 @@
 title: ipass
 remote_theme: just-the-docs/just-the-docs
+markdown: kramdown
+kramdown:
+  input: GFM
 math: mathjax
 mathjax_support: true
