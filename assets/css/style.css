@@ -112,3 +112,13 @@
   font-size: 1.4em !important;
   overflow: visible;
 }
+
+.kait_ipass table {
+  border-collapse: collapse;
+}
+
+.kait_ipass th,
+.kait_ipass td {
+  border: 1px solid #333;
+  padding: 0.4em 0.6em;
+}
