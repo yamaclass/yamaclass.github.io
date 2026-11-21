@@ -24,13 +24,13 @@
       <h3><a href="https://yamaclass.github.io/kait_ipass/"
           style="color: #000000; text-decoration: none; white-space: nowrap;">初級IT国家資格取得支援講義</a></h3>
 
+      <div>問題解説</div>
+
       <div class="search-box">
         <input id="site-search" type="search" placeholder="検索">
         <div id="search-status" aria-live="polite"></div>
         <div id="search-results"></div>
       </div>
-
-      <div>問題解説</div>
 
       {% assign menu_pages = site.pages | where_exp: "page", "page.url contains '/kait_ipass/'" | sort: "title" %}
 
