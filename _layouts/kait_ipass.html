@@ -18,11 +18,19 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
-<body>
+<body data-search-index="{{ '/search.json' | relative_url }}">
   <div class="layout kait_ipass">
     <aside class="sidebar">
       <h3><a href="https://yamaclass.github.io/kait_ipass/"
           style="color: #000000; text-decoration: none; white-space: nowrap;">初級IT国家資格取得支援講義</a></h3>
+
+      <div class="search-box">
+        <label for="site-search">コンテンツ内検索</label>
+        <input id="site-search" type="search" placeholder="語句を入力">
+        <div id="search-status" aria-live="polite"></div>
+        <div id="search-results"></div>
+      </div>
+
       <div>問題解説</div>
 
       {% assign menu_pages = site.pages | where_exp: "page", "page.url contains '/kait_ipass/'" | sort: "title" %}
@@ -73,6 +81,7 @@
       <div style="text-align: right;">神奈川工科大学 初級IT国家資格取得支援講義</div>
     </main>
   </div>
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 
 </html>

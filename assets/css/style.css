@@ -122,3 +122,38 @@
   border: 1px solid #333;
   padding: 0.4em 0.6em;
 }
+
+.search-box {
+  margin: 0 0 1rem;
+}
+
+.search-box label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.search-box input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.45rem;
+}
+
+#search-status {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+
+#search-results {
+  margin-top: 0.35rem;
+}
+
+#search-results ul {
+  display: block;
+  margin: 0;
+}
+
+#search-results li {
+  white-space: normal;
+  margin-bottom: 0.35rem;
+}

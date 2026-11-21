@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign search_pages = site.pages
+  | where_exp: "p", "p.url contains '/kait_ipass/'"
+  | where_exp: "p", "p.url != '/kait_ipass/'"
+  | where_exp: "p", "p.name != 'update.md'"
+  | where_exp: "p", "p.title"
+  | sort: "name" %}
+{% for p in search_pages %}
+  {
+    "title": {{ p.title | jsonify }},
+    "url": {{ p.url | relative_url | jsonify }},
+    "content": {{ p.content | strip_html | strip_newlines | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
