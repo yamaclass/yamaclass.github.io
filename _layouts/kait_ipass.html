@@ -43,30 +43,30 @@
       <hr>
 
       {% assign ordered_pages = site.pages
-        | where_exp: "p", "p.url contains '/kait_ipass/'"
-        | where_exp: "p", "p.url != '/kait_ipass/'"
-        | where_exp: "p", "p.title"
-        | sort: "name" %}
+      | where_exp: "p", "p.url contains '/kait_ipass/'"
+      | where_exp: "p", "p.url != '/kait_ipass/'"
+      | where_exp: "p", "p.title"
+      | sort: "name" %}
 
       {% assign found_current = false %}
       {% assign next_page = nil %}
 
       {% for candidate in ordered_pages %}
-        {% if found_current and next_page == nil %}
-          {% assign next_page = candidate %}
-        {% endif %}
+      {% if found_current and next_page == nil %}
+      {% assign next_page = candidate %}
+      {% endif %}
 
-        {% if candidate.url == page.url %}
-          {% assign found_current = true %}
-        {% endif %}
+      {% if candidate.url == page.url %}
+      {% assign found_current = true %}
+      {% endif %}
       {% endfor %}
 
       {% if next_page %}
-        <div style="text-align: right;">
-          <a href="{{ next_page.url | relative_url }}">
-            次へ：{{ next_page.title }}
-          </a>
-        </div>
+      <div style="text-align: left;">
+        <a href="{{ next_page.url | relative_url }}">
+          次の問題：{{ next_page.title }}
+        </a>
+      </div>
       {% endif %}
 
       <div style="text-align: right;">神奈川工科大学 初級IT国家資格取得支援講義</div>
