@@ -157,3 +157,7 @@
   white-space: normal;
   margin-bottom: 0.35rem;
 }
+
+.kait_ipass strong {
+  color: red;
+}
