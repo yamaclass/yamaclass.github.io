@@ -34,11 +34,15 @@
         <div id="search-results"></div>
       </div>
 
+      <div style="margin-bottom: 1rem;">
+        <a href="{{ '/kait_ipass/update.html' | relative_url }}">更新履歴</a>
+      </div>
+
       {% assign menu_pages = site.pages | where_exp: "page", "page.url contains '/kait_ipass/'" | sort: "title" %}
 
       <ul>
         {% for menu_page in menu_pages %}
-        {% if menu_page.title and menu_page.url != '/kait_ipass/' %}
+        {% if menu_page.title and menu_page.url != '/kait_ipass/' and menu_page.url != '/kait_ipass/update.html' %}
         <li>
           <a href="{{ menu_page.url | relative_url }}">{{ menu_page.title }}</a>
         </li>
